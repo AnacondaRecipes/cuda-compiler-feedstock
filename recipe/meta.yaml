@@ -18,8 +18,9 @@ requirements:
   run:
     - __linux  # [linux]
     - __win    # [win]
-    - c-compiler
-    - cxx-compiler
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - binutils   # [linux]
     - cuda-cuobjdump 12.4.127
     - cuda-cuxxfilt 12.4.127
     - cuda-nvcc 12.4.131
