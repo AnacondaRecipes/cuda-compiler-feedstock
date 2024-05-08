@@ -13,6 +13,7 @@ source:
 build:
   number: 0
   noarch: generic
+  skip: true # [osx or (linux and s390x)]
 
 requirements:
   run:
