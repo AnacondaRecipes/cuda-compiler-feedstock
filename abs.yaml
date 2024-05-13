@@ -1,3 +1,2 @@
 # we want a noarch package for linux, and one for win.
-noarch_upload:
-  - [linux-64, win-64]
+noarch_upload: [linux-64, win-64]
