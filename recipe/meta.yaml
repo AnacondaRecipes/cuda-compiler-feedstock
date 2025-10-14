@@ -1,4 +1,5 @@
-{% set version = "12.4.1" %}
+{% set version = "12.8.1" %}
+{% set exists = "" %}  # [not (linux or win)]
 {% set exists = "which" %}  # [linux]
 {% set exists = "where" %}  # [win]
 
@@ -16,15 +17,12 @@ build:
 
 requirements:
   run:
-    #- __linux  # [linux]
-    #- __win    # [win]
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - binutils   # [linux]
-    - cuda-cuobjdump 12.4.127
-    - cuda-cuxxfilt 12.4.127
-    - cuda-nvcc 12.4.131
-    - cuda-nvprune 12.4.127
+    - c-compiler
+    - cxx-compiler
+    - cuda-cuobjdump 12.8.90
+    - cuda-cuxxfilt 12.8.90
+    - cuda-nvcc 12.8.93
+    - cuda-nvprune 12.8.90
 
 test:
   commands:
